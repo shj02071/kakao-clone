@@ -1,0 +1,37 @@
+#no-mobile {
+  position: absolute;
+  z-index: 99;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+#no-mobile span {
+  animation: too-big 3s ease-out infinite;
+}
+
+@keyframes too-big {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@media screen and (max-width: 520px) {
+  #no-mobile {
+    display: none;
+  }
+}
